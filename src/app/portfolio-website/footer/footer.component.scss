@@ -1,0 +1,26 @@
+.footer{
+   background-color: #007bff;
+   color: #fff;
+   text-align: center;
+   padding: 20px;
+}
+
+.footer-links{
+    justify-content: center;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.footer-links a{
+
+    text-decoration: none;
+    color: #fff;
+    margin: 0 10px;
+    font-weight: bold;
+   font-size: 16px;
+   font-style: italic;
+}
+.footer-links a:hover{
+    color: #ffcc00;
+    cursor: pointer;
+}
