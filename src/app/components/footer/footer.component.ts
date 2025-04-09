@@ -18,13 +18,13 @@ export class FooterComponent {
     window.scrollTo({top:0,behavior:'smooth'})
   }
   onContact() {
-    this.router.navigate(['./portfolio-website/contact'])
+    this.router.navigate(['/contact'])
   }
   onSkills() {
-    this.router.navigate(['./portfolio-website/skills'])
+    this.router.navigate(['/skills'])
   }
   onAbout() {
-    this.router.navigate(['./portfolio-website/about'])
+    this.router.navigate(['/about'])
 
   }
 }
