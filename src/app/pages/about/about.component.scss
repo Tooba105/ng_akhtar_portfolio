@@ -1,192 +1,6 @@
 
-
-// // second code
-// * {
-//     margin: 0;
-//     padding: 0;
-//     box-sizing: border-box;
-//     font-family: Arial, sans-serif;
-//     color: #333;
-   
-// }
-
-// body {
-//     font-family: Arial, sans-serif;
-//     color: #333;
-// }
-
-// /* Section Container */
-// .section {
-//     padding: 40px 20px;
-//     background-color: whiteng;
-//     display: flex;
-    
-//     justify-content:flex-start;
-//     align-items:left;
-//     flex-direction: column;
-//     text-align: center;
-// }
-
-// .section_container {
-//     max-width: 1200px;
-//     width: 100%;
-//     padding: 20px;
-// }
-
-// /* Title */
-// .title h1 {
-//     font-size: 2.5rem;
-//     font-weight: bold;
-//     margin-bottom: 20px;
-// }
-
-// .title span {
-//     color: #04AA6D;
-// }
-
-// .title h1 + h1 {
-//     font-size: 1.75rem;
-//     font-weight: normal;
-//     margin-top: 10px;
-// }
-
-// /* Description */
-// .description {
-//     font-size: 20px;
-//     text-align: justify;
-//     line-height: 1.6;
-//     margin-bottom: 30px;
-//     color: #555;
-// }
-
-// /* Action buttons */
-// .action-btns {
-//     display: flex;
-//     gap: 15px;
-//     justify-content: center;
-//     margin-bottom: 30px;
-// }
-
-// button {
-//     width: 20%;
-//     padding: 14px;
-//     background-color:#4caf50;
-//     color: white;
-//     font-size: 18px;
-//     border: none;
-//     border-radius: 5px;
-//     cursor: pointer;
-//     transition: background-color 0.3s ease;
-// }
-
-// button:hover {
-//     background-color: #04AA6D;
-// }
-
-// button:active {
-//     transform: translateY(1px);
-// }
-
-// /* Profile Image */
-// img {
-//     max-width: 30%;
-//     height: auto;
-//     border-radius: 50%;
-//     margin-top: 30px;
-    
-// }
-
-// /* Media Queries for Responsiveness */
-// @media (max-width: 1024px) {
-//     .section_container {
-//         padding: 10px;
-//     }
-
-//     .title h1 {
-        
-//         font-size: 2rem;
-//     }
-
-//     .title + h1 {
-//         font-size: 1.5rem;
-
-//     }
-
-//     .description {
-//         font-size: 1rem;
-//     }
-
-//     .action-btns {
-//         flex-direction: column;
-//         gap: 10px;
-//     }
-
-//     button {
-//         width: 100%;
-//         max-width: 200px;
-//         padding: 12px;
-//         background-color: #4caf50;
-//         color: white;
-//         padding: 10px 15px;
-//         border: none;
-//         border-radius: 6px;
-//         cursor: pointer;
-//         font-size: large;
-//     }
-// }
-
-// @media (max-width: 768px) {
-//     .section {
-//         padding: 20px;
-//     }
-
-//     .title h1 {
-//         font-size: 1.8rem;
-//     }
-
-//     .title + h1 {
-//         font-size: 1.4rem;
-//     }
-
-//     .description {
-//         font-size: 0.95rem;
-//     }
-
-//     .action-btns {
-//         flex-direction: column;
-//         gap: 15px;
-//     }
-
-//     img {
-//         width: 80%;
-//         margin: 20px 0;
-//     }
-// }
-
-// @media (max-width: 480px) {
-//     .title h1 {
-//         font-size: 1.6rem;
-//     }
-
-//     .description {
-//         font-size: 0.9rem;
-//         display:block;
-//         text-align: right;
-//         text-align:right;
-//     }
-
-//     .action-btns button {
-//         width: 100%;
-//         padding: 12px;
-//     }
-
-//     img {
-//         width: 100%;
-//     }
-// }
-
 /* General Container Style */
-/* General Layout */
+@import "../../../color_variables.scss";
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -211,7 +25,7 @@
 }
 
 .title span {
-    color: #4CAF50; /* Green color for "Developer" */
+    color: $backColor; /* Green color for "Developer" */
 }
 
 .title img {
@@ -220,7 +34,7 @@
     border-radius: 50%;
     object-fit: cover;
     margin-top: 20px;
-    border: 5px solid #ddd; /* Subtle border around the image */
+    border: 5px solid $backColor; /* Subtle border around the image */
 }
 
 .title h1 + div {
@@ -264,21 +78,21 @@ button {
 }
 
 button.hire-me {
-    background-color: #4CAF50;
-    color: white;
+    background-color: $backColor;
+    color: $foreColor;
 }
 
 button.hire-me:hover {
-    background-color: #45a049;
+    background-color: $hoverColor;
 }
 
 button.download-cv {
-    background-color: #4CAF50;
+    background-color: $backColor;
     color: white;
 }
 
 button.download-cv:hover {
-    background-color: #4CAF50;
+    background-color: $hoverColor;
 }
 
 /* Media Query for Mobile Devices */
@@ -301,6 +115,6 @@ button.download-cv:hover {
     }
 
     button {
-        width: 100%;
+        width: 80%;
     }
 }
