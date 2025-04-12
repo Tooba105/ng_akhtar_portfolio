@@ -1,29 +1,85 @@
-.navbar{
-    display:flex;
+
+@import "../../../color_variables.scss";
+html, body {
+    margin: 0;  /* Remove default margins */
+    padding: 0; /* Remove default padding */
+    width: 100%;  /* Ensure full width */
+  }
+  
+  /* Navbar Basic Styling */
+  .navbar {
+    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    font-family:"Lobster", sans-serif;
-    font-size: 20px;
+    background-color: $backColor;
+    color: $foreColor;
+    font-family: "Lobster", sans-serif;
+    font-size: 22px;
     font-style: italic;
-}
-
-.nav-links{
+    width: 100%;  
+    box-sizing: border-box; 
+    margin: 0; 
+  }
+  
+  /* Navbar Links Styling */
+  .nav-links {
     list-style: none;
     display: flex;
-}
-.nav-links li{
+    margin: 0;  
+    padding: 0; 
+  }
+  
+  .nav-links li {
     margin-right: 20px;
-}
-.nav-links a{
+  }
+  
+  .nav-links a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
     transition: color 0.3s ease;
-}
-.nav-links a:hover{
+  }
+  
+  .nav-links a:hover {
     color: #ffcc00;
     cursor: pointer;
-}
+  }
+  
+  /* Mobile Responsiveness (for screen widths 320px or smaller) */
+  @media (max-width: 320px) {
+    .navbar {
+      flex-direction: row;  
+      padding: 15px 15px; /* Ensure equal padding on both sides */
+    }
+  
+    .nav-links {
+      display: flex;
+      flex-direction: row;  /* Keep links in a horizontal row */
+      width: auto;  /* Ensure the links don't take up the full width */
+      margin: 0;
+      padding: 0;
+    }
+  
+    .nav-links li {
+      margin-right: 15px;  /* Add space between links */
+    }
+  
+    .nav-links a {
+      font-size: 16px;  /* Slightly reduce font size on mobile */
+    }
+  }
+  
+  /* Tablet and Larger Screens (321px and above) */
+  @media (min-width: 321px) {
+    .nav-links {
+      display: flex;
+      flex-direction: row;  /* Keep links in a horizontal row */
+      justify-content: flex-end;  /* Align the links to the right */
+    }
+  
+    .nav-links li {
+      margin-right: 25px;  /* Horizontal spacing between links */
+    }
+  }
+  
