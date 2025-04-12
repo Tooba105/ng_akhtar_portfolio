@@ -1,7 +1,6 @@
-<app-navbar></app-navbar>
 
 <div class="form-container">
-    <p style="text-align: center;font-size: 25px;">Contact</p>
+    <p style="text-align: center;font-size: 25px;">Contact Me</p>
     <form [formGroup]="userForm">
         <label for="name">Name:</label>
         <input type="text" id="name" formControlName="name">
@@ -16,14 +15,6 @@
         <textarea id="message" formControlName="message" rows="4"></textarea>
 
         <button (click)="onSubmit()">Submit</button>
-
-
-
     </form>
-
-
 </div>
 
-<div style="margin-top: 20px;">
-    <app-footer></app-footer>
-</div>

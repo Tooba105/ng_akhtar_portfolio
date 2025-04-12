@@ -14,8 +14,11 @@ export class FooterComponent {
 
   }
 
+  // onHome() {
+  //   window.scrollTo({top:0,behavior:'smooth'})
+  // }
   onHome() {
-    window.scrollTo({top:0,behavior:'smooth'})
+    this.router.navigate(["/"]);
   }
   onContact() {
     this.router.navigate(['/contact'])
