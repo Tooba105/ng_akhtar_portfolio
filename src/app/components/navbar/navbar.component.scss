@@ -8,10 +8,12 @@ html, body {
   
   /* Navbar Basic Styling */
   .navbar {
+   
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    position:sticky;
     background-color: $backColor;
     color: $foreColor;
     font-family: "Lobster", sans-serif;
@@ -82,4 +84,3 @@ html, body {
       margin-right: 25px;  /* Horizontal spacing between links */
     }
   }
-  

@@ -1,199 +1,175 @@
 
-@import "../../../color_variables.scss";
-/* Body styling */
+@import "../../../color_variables.scss"; // SCSS only
+
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
 }
 
-/* Navbar Styling */
 app-navbar {
-    width: 100%;
-    display: block;
+  width: 100%;
+  display: block;
 }
 
-/* Main form container styling */
+/* ===== Form Container ===== */
 .form-container {
-    background-color: $backColor;
-    width: 100%;
-    max-width: 500px;
-    margin: 25px auto;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+  background-color: $backColor;
+  width: 90%;
+  max-width: 450px;
+  margin: 40px auto;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  box-sizing: border-box;
 }
 
-/* Form Title */
+/* ===== Form Heading ===== */
 .form-container p {
-    text-align: center;
-    font-size: 30px;
-    color: $foreColor;
-    margin-bottom: 30px;
-    font-weight: bold;
-    letter-spacing: 1px;
+  text-align: center;
+  font-size: 30px;
+  color: $foreColor;
+  margin-bottom: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
-/* Label Styling */
+/* ===== Labels ===== */
 label {
-    display: block;
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 8px;
-    color: $foreColor;
-    transition: color 0.3s ease;
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: $foreColor;
 }
 
-/* Input and Textarea Styling */
+/* ===== Inputs & Textareas ===== */
 input[type="text"],
 input[type="email"],
 input[type="country"],
 textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
-    border: 1px solid $backColor;
-    border-radius: 5px;
-    font-size: 16px;
-    background-color: $foreColor;
-    box-sizing: border-box;
-    transition: all 0.3s ease;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 8px;
+  border: 1px solid $backColor;
+  border-radius: 5px;
+  font-size: 15px;
+  background-color: $foreColor;
+  color: #000;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
 }
 
-/* Focused Input and Textarea Styling */
 input:focus,
 textarea:focus {
-    border-color: $backColor;
-    background-color: $foreColor;
-    outline: none;
+  border-color: darken($backColor, 10%);
+  background-color: $foreColor;
+  outline: none;
 }
 
-/* Textarea specific style */
 textarea {
-    resize: vertical; /* Allow resizing vertically */
+  resize: vertical;
 }
 
-/* Button Styling */
+/* ===== Button ===== */
 button {
-    width: 40%; /* Make button 100% width */
-    padding: 14px;
-    background-color: $backColor;
-    color: $foreColor;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  width: 50%;
+  padding: 14px;
+  background-color: $backColor;
+  color: $foreColor;
+  font-size: 17px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
 }
 
 button:hover {
-    background-color: $hoverColor;
+  background-color: $hoverColor;
 }
 
-/* Responsive Design */
+/* ===== Responsive Breakpoints ===== */
 
-/* Tablet and Mobile Styling */
+/* Tablets */
 @media (max-width: 1024px) {
-    .form-container {
-        max-width: 500px; /* Keep the form width constant */
-        padding: 30px;
-        margin: 50px auto;
-    }
+  .form-container {
+    padding: 25px;
+    margin: 35px auto;
+  }
 
-    .form-container p {
-        font-size: 28px;
-    }
+  .form-container p {
+    font-size: 28px;
+  }
 
-    input[type="text"],
-    input[type="email"],
-    input[type="country"],
-    textarea {
-        font-size: 15px;
-        padding: 12px;
-    }
+  input,
+  textarea {
+    font-size: 14px;
+    padding: 10px;
+  }
 
-    button {
-        font-size: 16px;
-        padding: 14px;
-    }
+  button {
+    font-size: 16px;
+    padding: 12px;
+  }
 }
 
-/* Mobile-first styling for devices with a width up to 768px */
+/* Mobile */
 @media (max-width: 768px) {
-    .form-container {
-        max-width: 500px; /* Keep the form width constant */
-        padding: 30px;
-        margin: 50px auto;
-    }
+  .form-container {
+    padding: 20px;
+    margin: 30px auto;
+  }
 
-    .form-container p {
-        font-size: 24px;
-    }
+  .form-container p {
+    font-size: 24px;
+  }
 
-    input[type="text"],
-    input[type="email"],
-    input[type="country"],
-    textarea {
-        font-size: 14px;
-        padding: 12px;
-    }
+  input,
+  textarea {
+    font-size: 13px;
+    padding: 10px;
+  }
 
-    button {
-        font-size: 15px;
-        padding: 14px;
-    }
+  button {
+    font-size: 15px;
+  }
 }
 
-/* Small screens (Mobile Portrait) */
+/* Small Devices */
 @media (max-width: 480px) {
-    .form-container {
-        max-width: 500px; /* Keep the form width constant */
-        padding: 30px;
-        margin: 50px auto;
-    }
+  .form-container {
+    padding: 18px;
+    
+  }
 
-    .form-container p {
-        font-size: 20px;
-    }
+  .form-container p {
+    font-size: 20px;
+  }
 
-    input[type="text"],
-    input[type="email"],
-    input[type="country"],
-    textarea {
-        font-size: 13px;
-        padding: 12px;
-    }
-
-    button {
-        font-size: 14px;
-        padding: 14px;
-    }
+  button {
+    font-size: 14px;
+    padding: 14px;
+  }
 }
 
-/* Smallest screens (Mobile) */
+/* Extra Small */
 @media (max-width: 320px) {
-    .form-container {
-        max-width: 500px; /* Keep the form width constant */
-        padding: 30px;
-        margin: 50px auto;
-    }
+  .form-container p {
+    font-size: 18px;
+  }
 
-    .form-container p {
-        font-size: 18px;
-    }
+  input,
+  textarea {
+    font-size: 12px;
+    padding: 10px;
+  }
 
-    input[type="text"],
-    input[type="email"],
-    input[type="country"],
-    textarea {
-        font-size: 12px;
-        padding: 12px;
-    }
-
-    button {
-        font-size: 12px;
-        padding: 14px;
-    }
+  button {
+    font-size: 13px;
+    padding: 14px;
+  }
 }
+
