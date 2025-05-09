@@ -19,7 +19,7 @@
 /* Title Section */
 .title h1 {
     font-size: 2.8rem;
-    color: #333;
+    color: $bcColor;
     font-weight: bold;
     margin: 0;
 }
@@ -44,14 +44,14 @@
 /* Summary Section */
 h1 {
     font-size: 2rem;
-    color: #333;
+    color: $bcColor;
     margin: 20px 0;
     font-weight: 600;
 }
 
 .description {
     font-size: 1.1rem;
-    color: #555;
+    color: $color;
     line-height: 1.6;
     max-width: 900px;
     text-align: justify;
@@ -88,7 +88,7 @@ button.hire-me:hover {
 
 button.download-cv {
     background-color: $backColor;
-    color: white;
+    color: $foreColor;
 }
 
 button.download-cv:hover {

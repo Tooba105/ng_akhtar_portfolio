@@ -1,18 +1,5 @@
 
-body {
-
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  /* Full viewport height */
-  display: flex;
-  justify-content: center;
-  /* Horizontally centers the content */
-  align-items: center;
-  /* Vertically centers the content */
-  background-color: #f9f9f9;
-}
+@import "../../../color_variables.scss";
 
 .skills-container {
   justify-content: center;
@@ -28,7 +15,7 @@ body {
 }
 
 .skill-box {
-  background-color: #fff;
+  background-color: $foreColor;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin: 20px;
@@ -45,9 +32,10 @@ body {
 .skills-title {
   display: flex;
   align-items: center;
+  text-align: center;
   padding: 20px;
-  background-color: #007bff;
-  color: #fff;
+  background-color: $backColor;
+  color: $foreColor;
 }
 
 .skills-title .img {
@@ -62,39 +50,56 @@ body {
 }
 
 .skills-title h3 {
+  justify-content: center;
   margin: 0;
   font-size: 1.2em;
   font-weight: bold;
+  text-align: center;
 }
 
 .skill-box p {
   padding: 15px;
   font-size: 0.95em;
-  color: #555;
+  color: $color;
   line-height: 1.6;
-  background-color: #fafafa;
+  background-color: $foreColor;
 }
 
 /* Responsive Design */
+// @media (max-width: 768px) {
+//   .container {
+//     flex-direction: column;
+//     align-items: center;
+//   }
+
+//   .skill-box {
+//     width: 80%;
+//   }
+// }
+
 @media (max-width: 768px) {
   .container {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;      // ✅ Keep in row
+    flex-wrap: wrap;          // ✅ Allow wrapping
+    justify-content: center;  // ✅ Center the items
   }
 
   .skill-box {
-    width: 80%;
+    width: 45%;               // ✅ Two items per row
+    min-width: 200px;         // Optional: prevent too small
+    margin: 10px;             // Optional: spacing
   }
 }
+
 
 @media (max-width: 480px) {
   .skills-title h3 {
     font-size: 1em;
   }
 
-  // .skill-box {
-  //   width: 100%;
-  // }
+  .skill-box {
+    width: 80%;
+  }
 }
 @media only screen and (min-width: 960px) {
   /* styles for browsers larger than 960px; */
@@ -109,7 +114,7 @@ body {
  /* styles for mobile browsers smaller than 480px; (iPhone) */
 }
 @media only screen and (device-width: 768px) {
-  
+
  /* default iPad screens */
 }
 /* different techniques for iPad screening */
@@ -129,6 +134,7 @@ body {
   /* For landscape layouts only */
   .skill-box {
     width: 80%;
-    background-color: blue;
+    // background-color: $backColor;
   }
   }
+

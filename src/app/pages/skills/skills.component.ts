@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { NavbarComponent } from '../../components/navbar/navbar.component';
-import { FooterComponent } from '../../components/footer/footer.component';
+// import { NavbarComponent } from '../../components/navbar/navbar.component';
+// import { FooterComponent } from '../../components/footer/footer.component';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [NavbarComponent, FooterComponent],
+  imports: [],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss',
 })
